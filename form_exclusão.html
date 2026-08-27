@@ -1,22 +1,184 @@
-<!-- modify this form HTML and place wherever you want your form -->
-<form action="https://formspree.io/f/xeaqjrqd"
-      method="POST">
-    <label>
-        Seu E-mail:
-        <input type="email" name="email">
-    </label>
-    <label>
-        Seu nome:
-        <input type="nome" name="nome:">
-    </label>
-    <label>
-        Seu sobrenome:
-        <input type="sobrenome" name="sobrenome:">
-    </label>
-    <label>
-        Seu numero de telefone:
-        <input type="telefone" name="telefone:">
-    </label>
-    <!-- your other form fields go here -->
-    <button type="submit">Enviar</button>
-</form>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eaf4ff, #f7fbff);
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 80, 160, 0.12);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            color: #1769aa;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 48px;
+            border: 1px solid #d8e2ec;
+            border-radius: 10px;
+            padding: 0 15px;
+            font-size: 15px;
+            color: #333;
+            background: #f9fbfd;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #2196f3;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.12);
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2196f3, #1769aa);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 5px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(23, 105, 170, 0.25);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 500px) {
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            .form-header h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <div class="form-header">
+            <h2>Entre em contato</h2>
+            <p>Preencha seus dados abaixo</p>
+        </div>
+
+        <form action="https://formspree.io/f/xeaqjrqd" method="POST">
+
+            <div class="form-group">
+                <label for="email">Seu E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="nome">Seu nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="sobrenome">Seu sobrenome</label>
+                <input
+                    type="text"
+                    id="sobrenome"
+                    name="sobrenome"
+                    placeholder="Digite seu sobrenome"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Seu número de telefone</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="submit-button">
+                Enviar
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
