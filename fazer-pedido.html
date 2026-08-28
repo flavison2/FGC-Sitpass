@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acesso Antecipado - FGC Sitpass</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+            background:
+                radial-gradient(circle at top left, rgba(33, 150, 243, 0.18), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(23, 105, 170, 0.15), transparent 35%),
+                #f4f8fc;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 460px;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 15px 45px rgba(0, 70, 130, 0.12);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: linear-gradient(135deg, #2196f3, #1769aa);
+
+            color: white;
+            font-size: 32px;
+
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.25);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1769aa;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #6d7782;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .notice {
+            background: #eef7ff;
+            border: 1px solid #d6ebfc;
+            border-radius: 12px;
+
+            padding: 14px 16px;
+            margin-bottom: 25px;
+
+            color: #315d7d;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .notice strong {
+            color: #1769aa;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+
+            color: #303840;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #8c9aa7;
+            font-size: 17px;
+
+            pointer-events: none;
+        }
+
+        .form-group input {
+            width: 100%;
+            height: 52px;
+
+            border: 1px solid #dce5ed;
+            border-radius: 12px;
+
+            background: #f9fbfd;
+
+            padding: 0 15px 0 45px;
+
+            color: #303840;
+            font-size: 15px;
+
+            outline: none;
+
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:hover {
+            border-color: #b9ccdc;
+        }
+
+        .form-group input:focus {
+            border-color: #2196f3;
+            background: #ffffff;
+
+            box-shadow:
+                0 0 0 4px rgba(33, 150, 243, 0.10);
+        }
+
+        .form-group input::placeholder {
+            color: #a8b2bb;
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 54px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: linear-gradient(135deg, #2196f3, #1769aa);
+
+            color: #ffffff;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+
+            box-shadow: 0 7px 18px rgba(23, 105, 170, 0.20);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 24px rgba(23, 105, 170, 0.28);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #929ba3;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 500px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 30px 22px;
+                border-radius: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .icon {
+                width: 62px;
+                height: 62px;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">
+            🔓
+        </div>
+
+        <div class="header">
+            <h1>Acesso Antecipado</h1>
+
+            <p>
+                Seja um dos primeiros a utilizar o
+                <strong>FGC Sitpass</strong> e tenha acesso antecipado
+                ao aplicativo de agendamento.
+            </p>
+        </div>
+
+        <div class="notice">
+            <strong>🚀 Vagas antecipadas</strong><br>
+            Preencha seus dados abaixo para solicitar o acesso.
+            Entraremos em contato quando seu acesso estiver disponível.
+        </div>
+
+        <form
+            action="https://formspree.io/f/xoeqqqvb"
+            method="POST"
+        >
+
+            <div class="form-group">
+
+                <label for="email">
+                    Seu E-mail
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        ✉
+                    </span>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="numero">
+                    Seu número de telefone
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">
+                        ☎
+                    </span>
+
+                    <input
+                        type="tel"
+                        id="numero"
+                        name="numero"
+                        placeholder="(00) 00000-0000"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Solicitar Acesso
+            </button>
+
+        </form>
+
+        <div class="footer">
+            Seus dados serão utilizados apenas para processar
+            sua solicitação de acesso antecipado.
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
