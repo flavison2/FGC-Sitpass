@@ -1,6 +1,6 @@
 {
-	"name": "FGC Sitpass-site",
-	"short_name": "FGC Sitpass-site",
+	"name": "FGC Sitpass",
+	"short_name": "FGC Sitpass",
 	"description": "Aplicativo para agendamentos e informações da loja FGC",
 	"start_url": "index.html",
 	"display": "fullscreen",
